@@ -37,6 +37,6 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_margin">15dp</item>
-        <item name="background">@drawable/border</item>
+        <item name="bac">@drawable/border</item>
     </style>
 </resources>

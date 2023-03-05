@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        zeroButton.setOnClickListener{
+            onClickNumber(zeroButton)
+        }
         oneButton.setOnClickListener{
             onClickNumber(oneButton)
         }
