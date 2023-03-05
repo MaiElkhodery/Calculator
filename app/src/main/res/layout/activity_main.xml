@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/layout">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/rowsLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/divButton"
+            style="@style/ButtonsStyle"
+            android:text="/"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="343dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mulButton"
+            style="@style/ButtonsStyle"
+            android:text="*"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/subButton"
+            style="@style/ButtonsStyle"
+            android:text="-"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addButton"
+            style="@style/ButtonsStyle"
+            android:text="+"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/equalButton"
+            style="@style/ButtonsStyle"
+            android:text="="
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        style="@style/rowsLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/modButton"
+            style="@style/ButtonsStyle"
+            android:text="%"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="343dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nineButton"
+            style="@style/ButtonsStyle"
+            android:text="9"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sixButton"
+            style="@style/ButtonsStyle"
+            android:text="6"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/threeButton"
+            style="@style/ButtonsStyle"
+            android:text="3"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dotButton"
+            style="@style/ButtonsStyle"
+            android:text="."
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        style="@style/rowsLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteButton"
+            style="@style/ButtonsStyle"
+            android:text="x"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="343dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/eightButton"
+            style="@style/ButtonsStyle"
+            android:text="8"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fiveButton"
+            style="@style/ButtonsStyle"
+            android:text="5"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/twoButton"
+            style="@style/ButtonsStyle"
+            android:text="2"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zeroButton"
+            style="@style/ButtonsStyle"
+            android:text="0"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/rowsLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteAllButton"
+            style="@style/ButtonsStyle"
+            android:text="c"
+            tools:layout_editor_absoluteX="279dp"
+            tools:layout_editor_absoluteY="343dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sevenButton"
+            style="@style/ButtonsStyle"
+            android:text="7"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fourButton"
+            style="@style/ButtonsStyle"
+            android:text="4"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/oneButton"
+            style="@style/ButtonsStyle"
+            android:text="1"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Button"
+            style="@style/ButtonsStyle"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="428dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="start|top"
+        android:textStyle = "bold"
+        android:textSize = "20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/operationsTextView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="start|top"
+        android:textStyle = "bold"
+        android:textSize = "20sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
