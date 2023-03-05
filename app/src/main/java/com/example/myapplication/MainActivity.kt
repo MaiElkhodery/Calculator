@@ -100,29 +100,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun calc(){
-        if(digitsOperators().isEmpty()){
+        val digitList = digitsOperators()
+        if(digitList.isEmpty()){
             resultTextView.text=""
         }
-        val digitList = digitsOperators()
         var index =0
         var number = 0.0f
         var result = 0.0f
-        while(digitList.isNotEmpty()){
-            if(digitList[index] == "+" || digitList[index] == "-"|| digitList[index] == "*"
-                || digitList[index] == "/" || digitList[index] == "%"){
-                    when(digitList[index]){
-                    "+" -> result = digitList[index+1].toString().toFloat() + number
-                    "-" -> result = number - digitList[index+1].toString().toFloat()
-                    "*" -> result = digitList[index+1].toString().toFloat() * number
-                    "/" -> result = number / digitList[index+1].toString().toFloat()
-                    "%" -> result = number % digitList[index+1].toString().toFloat()
+        while(index < digitList.size){
+            Log.d("loop on list ",digitList[index].toString())
+            if(digitList[index] == '+' || digitList[index] == '-'|| digitList[index] == '*' || digitList[index] == '/' || digitList[index] == '%'){
+                Log.d("operation",digitList[index].toString())
+                when(digitList[index]){
+                    '+' -> result = digitList[index+1].toString().toFloat() + number
+                    '-' -> result = number - digitList[index+1].toString().toFloat()
+                    '*' -> result = digitList[index+1].toString().toFloat() * number
+                    '/' -> result = number / digitList[index+1].toString().toFloat()
+                    '%' -> result = number % digitList[index+1].toString().toFloat()
                 }
-                digitList.removeAt(index)
                 digitList[index+1] = result.toString()
+                resultTextView.text= result.toString()
+                Log.d("result",result.toString())
             }else{
+                Log.d("number",digitList[index].toString())
                 number = digitList[index].toString().toFloat()
-                digitList.removeAt(index)
             }
+            index++
         }
         resultTextView.text= result.toString()
     }
@@ -130,13 +133,15 @@ class MainActivity : AppCompatActivity() {
         val list = mutableListOf<Any>()
         var currentDigit = ""
         for (char in operationsTextView.text){
-            if(char.isDigit()|| char == '.'){
-                currentDigit += char
-            }
-            else{
+            if(char == '+'|| char == '-' || char == '*' || char == '/' || char == '%'){
+                Log.d("add num to list",currentDigit)
+                Log.d("add char to list",char+"")
                 list.add(currentDigit.toFloat())
                 currentDigit =""
                 list.add(char)
+            }
+            else{
+                currentDigit += char
             }
         }
         if(currentDigit != ""){
